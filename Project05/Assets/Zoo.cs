@@ -7,11 +7,19 @@ public class Zoo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Animal cat = new Animal();
-        cat.name = "고양이";
-        cat.sound = "야옹!";
+        Animal tom = new Animal();
+        tom.name = "톰";
+        tom.sound = "야옹!";
 
-        cat.PlaySound();
+        Animal jerry = new Animal();
+        jerry.name = "제리";
+        jerry.sound = "찍찍!";
+
+        jerry = tom;
+        jerry.name = "미키";
+
+        tom.PlaySound();
+        jerry.PlaySound();
 
     }
 
